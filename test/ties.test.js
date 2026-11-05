@@ -1,0 +1,3 @@
+import test from 'node:test';import assert from 'node:assert/strict';import {rankingTies,renderResultBlock}from '../src/core.js';
+test('tie never declares the first option winner',()=>{const r=[{optionId:'a',score:2},{optionId:'b',score:2}];assert.equal(rankingTies(r).uniqueWinner,null);const text=renderResultBlock({question:'Q?',id:'p',options:[{id:'a',label:'A'},{id:'b',label:'B'}]},r);assert.match(text,/Tie/);assert.doesNotMatch(text,/Winner/);});
+test('unique maximum independent of array order',()=>assert.equal(rankingTies([{optionId:'b',score:1},{optionId:'a',score:2}]).uniqueWinner,'a'));
