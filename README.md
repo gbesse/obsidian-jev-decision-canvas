@@ -12,3 +12,12 @@ Copy `main.js`, `manifest.json` and `styles.css` into `.obsidian/plugins/jev-dec
 Version 0.1.0 deliberately does not edit options, invent evidence, auto-apply a decision, or make a network request. A future live provider must use a user-controlled gateway rather than place a provider key in a vault.
 
 Independent community plugin. MIT licensed.
+
+
+## 2026-11-05 — FR / EN / ES
+
+FR : Un classement ex æquo affiche désormais « Ex æquo / Tie / Empate » au lieu de désigner la première option comme gagnante. `rankingTies(ranking)` expose les options en tête et `uniqueWinner:null` en cas d’égalité exacte ; pas de nouveau départage automatique.
+
+EN: Tied rankings now display “Ex æquo / Tie / Empate” instead of naming the first option winner. `rankingTies(ranking)` exposes top options and `uniqueWinner:null` on exact ties; no automatic tiebreak.
+
+ES: Clasificaciones empatadas muestran « Ex æquo / Tie / Empate » en vez de declarar ganadora la primera opción. `rankingTies(ranking)` expone opciones líderes y `uniqueWinner:null` con empate exacto; sin desempate automático.
